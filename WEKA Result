@@ -1,0 +1,105 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     wada
+Instances:    933
+Attributes:   7
+              Mean_X
+              Std_X
+              Mean_Y
+              Std_Y
+              Mean_Z
+              Std_Z
+              Activity
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Std_X <= 0.130164
+|   Mean_X <= -1.19669
+|   |   Mean_Y <= -5.441734: no_hand_wash (2.0)
+|   |   Mean_Y > -5.441734: hand_wash (12.0)
+|   Mean_X > -1.19669: no_hand_wash (63.0/2.0)
+Std_X > 0.130164
+|   Mean_Z <= 8.557854
+|   |   Mean_X <= -6.109754
+|   |   |   Mean_Y <= -1.758478
+|   |   |   |   Std_Y <= 0.604376
+|   |   |   |   |   Mean_X <= -7.32905: hand_wash (17.0)
+|   |   |   |   |   Mean_X > -7.32905: no_hand_wash (2.0)
+|   |   |   |   Std_Y > 0.604376
+|   |   |   |   |   Std_Z <= 9.121441
+|   |   |   |   |   |   Mean_Y <= -3.114957: no_hand_wash (115.0/29.0)
+|   |   |   |   |   |   Mean_Y > -3.114957
+|   |   |   |   |   |   |   Mean_X <= -10.631763
+|   |   |   |   |   |   |   |   Std_X <= 4.3385: no_hand_wash (25.0/1.0)
+|   |   |   |   |   |   |   |   Std_X > 4.3385
+|   |   |   |   |   |   |   |   |   Mean_Z <= -1.29652: hand_wash (14.0)
+|   |   |   |   |   |   |   |   |   Mean_Z > -1.29652: no_hand_wash (2.0)
+|   |   |   |   |   |   |   Mean_X > -10.631763
+|   |   |   |   |   |   |   |   Std_Y <= 5.833649
+|   |   |   |   |   |   |   |   |   Mean_Z <= -2.520972: no_hand_wash (2.0)
+|   |   |   |   |   |   |   |   |   Mean_Z > -2.520972: hand_wash (21.0/1.0)
+|   |   |   |   |   |   |   |   Std_Y > 5.833649: no_hand_wash (2.0)
+|   |   |   |   |   Std_Z > 9.121441
+|   |   |   |   |   |   Std_Y <= 14.303921: hand_wash (16.0)
+|   |   |   |   |   |   Std_Y > 14.303921: no_hand_wash (2.0)
+|   |   |   Mean_Y > -1.758478
+|   |   |   |   Std_X <= 2.608086: hand_wash (50.0)
+|   |   |   |   Std_X > 2.608086
+|   |   |   |   |   Std_Z <= 2.231247
+|   |   |   |   |   |   Mean_Y <= -1.215591: no_hand_wash (5.0)
+|   |   |   |   |   |   Mean_Y > -1.215591: hand_wash (2.0)
+|   |   |   |   |   Std_Z > 2.231247: hand_wash (46.0/3.0)
+|   |   Mean_X > -6.109754
+|   |   |   Std_Y <= 0.660023
+|   |   |   |   Mean_Y <= -9.12598: no_hand_wash (14.0/1.0)
+|   |   |   |   Mean_Y > -9.12598
+|   |   |   |   |   Mean_Y <= 4.359362: hand_wash (33.0/10.0)
+|   |   |   |   |   Mean_Y > 4.359362: no_hand_wash (4.0)
+|   |   |   Std_Y > 0.660023: hand_wash (450.0/63.0)
+|   Mean_Z > 8.557854
+|   |   Mean_X <= -2.484657: hand_wash (3.0)
+|   |   Mean_X > -2.484657
+|   |   |   Std_Z <= 0.695515: no_hand_wash (22.0)
+|   |   |   Std_Z > 0.695515
+|   |   |   |   Std_X <= 1.126352
+|   |   |   |   |   Mean_Z <= 9.048455: no_hand_wash (2.0)
+|   |   |   |   |   Mean_Z > 9.048455: hand_wash (3.0)
+|   |   |   |   Std_X > 1.126352: no_hand_wash (4.0)
+
+Number of Leaves  : 	27
+
+Size of the tree : 	53
+
+
+Time taken to build model: 0.1 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         749               80.2787 %
+Incorrectly Classified Instances       184               19.7213 %
+Kappa statistic                          0.5437
+Mean absolute error                      0.2384
+Root mean squared error                  0.3994
+Relative absolute error                 53.7126 %
+Root relative squared error             84.7879 %
+Total Number of Instances              933     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.878    0.348    0.835      0.878    0.856      0.545    0.811     0.852     hand_wash
+                 0.652    0.122    0.727      0.652    0.687      0.545    0.811     0.688     no_hand_wash
+Weighted Avg.    0.803    0.273    0.799      0.803    0.800      0.545    0.811     0.798     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 547  76 |   a = hand_wash
+ 108 202 |   b = no_hand_wash
+

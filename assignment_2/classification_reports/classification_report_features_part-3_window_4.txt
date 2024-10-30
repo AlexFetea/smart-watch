@@ -1,0 +1,124 @@
+=== Run Information ===
+
+Scheme:       weka.classifiers.trees.J48
+Relation:     wada
+Instances:    1348.0
+Attributes:   7
+              Mean_X
+              Std_X
+              Median_X
+              RMS_X
+              Mean_Y
+              Std_Y
+              Activity
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Std_X <= 0.251599
+|   Median_X <= -0.494572: hand_wash (19.0)
+|   Median_X > -0.494572: no_hand_wash (208.0/6.0)
+Std_X > 0.251599
+|   Std_X <= 12.642503
+|   |   Mean_X <= 3.927591
+|   |   |   Std_Y <= 2.627374
+|   |   |   |   Mean_X <= -9.848137
+|   |   |   |   |   Mean_X <= -12.593542: hand_wash (7.0)
+|   |   |   |   |   Mean_X > -12.593542: no_hand_wash (48.0/3.0)
+|   |   |   |   Mean_X > -9.848137
+|   |   |   |   |   Mean_X <= -9.424671: hand_wash (36.0/1.0)
+|   |   |   |   |   Mean_X > -9.424671: no_hand_wash (269.0/113.0)
+|   |   |   Std_Y > 2.627374
+|   |   |   |   RMS_X <= 5.024533
+|   |   |   |   |   Mean_X <= 0.597714
+|   |   |   |   |   |   Std_X <= 3.357143: hand_wash (130.0/5.0)
+|   |   |   |   |   |   Std_X > 3.357143
+|   |   |   |   |   |   |   Mean_X <= -1.414388: no_hand_wash (3.0)
+|   |   |   |   |   |   |   Mean_X > -1.414388: hand_wash (17.0/4.0)
+|   |   |   |   |   Mean_X > 0.597714
+|   |   |   |   |   |   Mean_Y <= -5.125606
+|   |   |   |   |   |   |   Median_X <= 3.4141: hand_wash (38.0/3.0)
+|   |   |   |   |   |   |   Median_X > 3.4141
+|   |   |   |   |   |   |   |   Mean_X <= 3.387588: no_hand_wash (4.0)
+|   |   |   |   |   |   |   |   Mean_X > 3.387588: hand_wash (3.0)
+|   |   |   |   |   |   Mean_Y > -5.125606
+|   |   |   |   |   |   |   Std_Y <= 5.490277
+|   |   |   |   |   |   |   |   Mean_X <= 2.423354: no_hand_wash (12.0/1.0)
+|   |   |   |   |   |   |   |   Mean_X > 2.423354
+|   |   |   |   |   |   |   |   |   Std_X <= 2.511776: hand_wash (3.0)
+|   |   |   |   |   |   |   |   |   Std_X > 2.511776: no_hand_wash (2.0)
+|   |   |   |   |   |   |   Std_Y > 5.490277: hand_wash (46.0/14.0)
+|   |   |   |   RMS_X > 5.024533
+|   |   |   |   |   Mean_Y <= -1.848126
+|   |   |   |   |   |   Median_X <= -0.66342
+|   |   |   |   |   |   |   Median_X <= -5.946834
+|   |   |   |   |   |   |   |   Median_X <= -8.721463
+|   |   |   |   |   |   |   |   |   RMS_X <= 13.559416: hand_wash (66.0/20.0)
+|   |   |   |   |   |   |   |   |   RMS_X > 13.559416
+|   |   |   |   |   |   |   |   |   |   Std_Y <= 4.261098: hand_wash (6.0)
+|   |   |   |   |   |   |   |   |   |   Std_Y > 4.261098
+|   |   |   |   |   |   |   |   |   |   |   Mean_X <= -15.843439: hand_wash (3.0)
+|   |   |   |   |   |   |   |   |   |   |   Mean_X > -15.843439: no_hand_wash (26.0/1.0)
+|   |   |   |   |   |   |   |   Median_X > -8.721463
+|   |   |   |   |   |   |   |   |   RMS_X <= 10.484455: no_hand_wash (57.0/7.0)
+|   |   |   |   |   |   |   |   |   RMS_X > 10.484455: hand_wash (7.0/1.0)
+|   |   |   |   |   |   |   Median_X > -5.946834
+|   |   |   |   |   |   |   |   Mean_Y <= -3.798919
+|   |   |   |   |   |   |   |   |   Std_X <= 2.70251: hand_wash (19.0)
+|   |   |   |   |   |   |   |   |   Std_X > 2.70251
+|   |   |   |   |   |   |   |   |   |   Std_X <= 6.559468: no_hand_wash (32.0/9.0)
+|   |   |   |   |   |   |   |   |   |   Std_X > 6.559468: hand_wash (22.0/6.0)
+|   |   |   |   |   |   |   |   Mean_Y > -3.798919: hand_wash (40.0)
+|   |   |   |   |   |   Median_X > -0.66342
+|   |   |   |   |   |   |   Std_X <= 9.58705: no_hand_wash (38.0/5.0)
+|   |   |   |   |   |   |   Std_X > 9.58705: hand_wash (5.0)
+|   |   |   |   |   Mean_Y > -1.848126
+|   |   |   |   |   |   RMS_X <= 9.560933
+|   |   |   |   |   |   |   Mean_Y <= -1.256013: no_hand_wash (6.0/1.0)
+|   |   |   |   |   |   |   Mean_Y > -1.256013
+|   |   |   |   |   |   |   |   Mean_X <= 2.884651: hand_wash (23.0/2.0)
+|   |   |   |   |   |   |   |   Mean_X > 2.884651: no_hand_wash (2.0)
+|   |   |   |   |   |   RMS_X > 9.560933: hand_wash (34.0)
+|   |   Mean_X > 3.927591
+|   |   |   Std_X <= 3.485123: hand_wash (44.0)
+|   |   |   Std_X > 3.485123
+|   |   |   |   RMS_X <= 6.522611: no_hand_wash (4.0/1.0)
+|   |   |   |   RMS_X > 6.522611: hand_wash (10.0)
+|   Std_X > 12.642503: hand_wash (59.0)
+
+Number of Leaves  : 	36
+
+Size of the tree : 	71
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        1067               79.1543 %
+Incorrectly Classified Instances       281               20.8457 %
+Kappa statistic                          0.5829
+Mean absolute error                      0.2447
+Root mean squared error                  0.3966
+Relative absolute error                 49.2529 %
+Root relative squared error             79.5681 %
+Total Number of Instances             1348     
+
+
+=== Detailed Accuracy By Class ===
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.772    0.185    0.830      0.772    0.800      0.585    0.855     0.853     hand_wash
+                 0.815    0.228    0.753      0.815    0.782      0.585    0.855     0.800     no_hand_wash
+Weighted Avg.    0.792    0.205    0.794      0.792    0.792      0.585    0.855     0.829     
+
+
+=== Confusion Matrix ===
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 562 166 |   a = hand_wash
+ 115 505 |   b = no_hand_wash
+

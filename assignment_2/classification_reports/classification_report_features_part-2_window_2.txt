@@ -1,0 +1,114 @@
+=== Run Information ===
+
+Scheme:       weka.classifiers.trees.J48
+Relation:     wada
+Instances:    1422.0
+Attributes:   7
+              Mean_X
+              Std_X
+              Mean_Y
+              Std_Y
+              Mean_Z
+              Std_Z
+              Activity
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Mean_Z <= 8.203713
+|   Std_Z <= 3.862732
+|   |   Mean_Z <= -7.210694: hand_wash (40.0/1.0)
+|   |   Mean_Z > -7.210694
+|   |   |   Mean_Y <= -1.602089
+|   |   |   |   Std_Y <= 5.589142: no_hand_wash (448.0/176.0)
+|   |   |   |   Std_Y > 5.589142
+|   |   |   |   |   Std_Z <= 3.776973: hand_wash (19.0/1.0)
+|   |   |   |   |   Std_Z > 3.776973: no_hand_wash (2.0)
+|   |   |   Mean_Y > -1.602089
+|   |   |   |   Mean_Z <= 6.323836
+|   |   |   |   |   Std_X <= 1.549736: hand_wash (53.0)
+|   |   |   |   |   Std_X > 1.549736
+|   |   |   |   |   |   Mean_Y <= 0.707592
+|   |   |   |   |   |   |   Std_Z <= 1.996304: no_hand_wash (3.0)
+|   |   |   |   |   |   |   Std_Z > 1.996304
+|   |   |   |   |   |   |   |   Mean_Y <= 0.045341: hand_wash (20.0/1.0)
+|   |   |   |   |   |   |   |   Mean_Y > 0.045341: no_hand_wash (4.0/1.0)
+|   |   |   |   |   |   Mean_Y > 0.707592: hand_wash (20.0)
+|   |   |   |   Mean_Z > 6.323836
+|   |   |   |   |   Std_X <= 2.137725
+|   |   |   |   |   |   Std_X <= 0.768001: no_hand_wash (6.0)
+|   |   |   |   |   |   Std_X > 0.768001
+|   |   |   |   |   |   |   Mean_Z <= 6.859348: no_hand_wash (3.0/1.0)
+|   |   |   |   |   |   |   Mean_Z > 6.859348: hand_wash (16.0)
+|   |   |   |   |   Std_X > 2.137725: no_hand_wash (12.0)
+|   Std_Z > 3.862732
+|   |   Std_X <= 3.225756: hand_wash (227.0/11.0)
+|   |   Std_X > 3.225756
+|   |   |   Std_X <= 11.717498
+|   |   |   |   Mean_Y <= -2.105287
+|   |   |   |   |   Mean_X <= -3.21976: no_hand_wash (75.0/32.0)
+|   |   |   |   |   Mean_X > -3.21976
+|   |   |   |   |   |   Std_Z <= 5.885633
+|   |   |   |   |   |   |   Mean_Z <= 2.23295: hand_wash (17.0/4.0)
+|   |   |   |   |   |   |   Mean_Z > 2.23295
+|   |   |   |   |   |   |   |   Std_Y <= 4.213557: hand_wash (3.0)
+|   |   |   |   |   |   |   |   Std_Y > 4.213557
+|   |   |   |   |   |   |   |   |   Mean_X <= -1.72851: hand_wash (2.0)
+|   |   |   |   |   |   |   |   |   Mean_X > -1.72851: no_hand_wash (14.0)
+|   |   |   |   |   |   Std_Z > 5.885633: hand_wash (42.0/5.0)
+|   |   |   |   Mean_Y > -2.105287
+|   |   |   |   |   Mean_Z <= 5.561619: hand_wash (32.0)
+|   |   |   |   |   Mean_Z > 5.561619
+|   |   |   |   |   |   Mean_X <= 1.699279: hand_wash (4.0/1.0)
+|   |   |   |   |   |   Mean_X > 1.699279: no_hand_wash (3.0)
+|   |   |   Std_X > 11.717498
+|   |   |   |   Std_Y <= 12.6047: hand_wash (69.0/1.0)
+|   |   |   |   Std_Y > 12.6047
+|   |   |   |   |   Mean_X <= -4.441914: no_hand_wash (6.0)
+|   |   |   |   |   Mean_X > -4.441914: hand_wash (6.0)
+Mean_Z > 8.203713
+|   Mean_X <= -0.362887
+|   |   Mean_Y <= 1.565759
+|   |   |   Mean_X <= -2.018446: hand_wash (4.0)
+|   |   |   Mean_X > -2.018446: no_hand_wash (18.0/1.0)
+|   |   Mean_Y > 1.565759
+|   |   |   Mean_Y <= 2.674804: hand_wash (23.0)
+|   |   |   Mean_Y > 2.674804: no_hand_wash (31.0/1.0)
+|   Mean_X > -0.362887: no_hand_wash (200.0/12.0)
+
+Number of Leaves  : 	31
+
+Size of the tree : 	61
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        1107               77.8481 %
+Incorrectly Classified Instances       315               22.1519 %
+Kappa statistic                          0.5595
+Mean absolute error                      0.2579
+Root mean squared error                  0.3953
+Relative absolute error                 52.3345 %
+Root relative squared error             79.6308 %
+Total Number of Instances             1422     
+
+
+=== Detailed Accuracy By Class ===
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.727    0.157    0.855      0.727    0.786      0.567    0.843     0.842     hand_wash
+                 0.843    0.273    0.709      0.843    0.770      0.567    0.843     0.771     no_hand_wash
+Weighted Avg.    0.778    0.208    0.791      0.778    0.779      0.567    0.843     0.811     
+
+
+=== Confusion Matrix ===
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 579 217 |   a = hand_wash
+  98 528 |   b = no_hand_wash
+

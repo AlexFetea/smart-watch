@@ -1,0 +1,88 @@
+=== Run Information ===
+
+Scheme:       weka.classifiers.trees.J48
+Relation:     wada
+Instances:    1385.0
+Attributes:   7
+              Mean_X
+              Std_X
+              Mean_Y
+              Std_Y
+              Mean_Z
+              Std_Z
+              Activity
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Mean_Z <= 5.42438
+|   Mean_Y <= -1.450665
+|   |   Std_Z <= 4.448047
+|   |   |   Mean_Z <= -7.045543: hand_wash (28.0)
+|   |   |   Mean_Z > -7.045543: no_hand_wash (425.0/194.0)
+|   |   Std_Z > 4.448047
+|   |   |   Std_X <= 3.583572: hand_wash (199.0/6.0)
+|   |   |   Std_X > 3.583572
+|   |   |   |   Mean_Y <= -2.549664
+|   |   |   |   |   Mean_X <= -10.83429: no_hand_wash (23.0/3.0)
+|   |   |   |   |   Mean_X > -10.83429: hand_wash (135.0/40.0)
+|   |   |   |   Mean_Y > -2.549664: hand_wash (39.0/2.0)
+|   Mean_Y > -1.450665: hand_wash (137.0/2.0)
+Mean_Z > 5.42438
+|   Std_Y <= 5.556531
+|   |   Mean_X <= -0.473867
+|   |   |   Mean_Y <= 1.308926
+|   |   |   |   Mean_X <= -2.564001
+|   |   |   |   |   Mean_Y <= -1.524944: hand_wash (5.0)
+|   |   |   |   |   Mean_Y > -1.524944: no_hand_wash (2.0)
+|   |   |   |   Mean_X > -2.564001: no_hand_wash (20.0)
+|   |   |   Mean_Y > 1.308926
+|   |   |   |   Mean_Z <= 8.978452: no_hand_wash (7.0/1.0)
+|   |   |   |   Mean_Z > 8.978452: hand_wash (19.0)
+|   |   Mean_X > -0.473867
+|   |   |   Mean_Y <= 2.383915
+|   |   |   |   Mean_Y <= 1.697687
+|   |   |   |   |   Std_Y <= 4.804891: no_hand_wash (159.0/1.0)
+|   |   |   |   |   Std_Y > 4.804891
+|   |   |   |   |   |   Std_X <= 2.308073: hand_wash (6.0/1.0)
+|   |   |   |   |   |   Std_X > 2.308073: no_hand_wash (5.0)
+|   |   |   |   Mean_Y > 1.697687: hand_wash (20.0/2.0)
+|   |   |   Mean_Y > 2.383915: no_hand_wash (116.0/1.0)
+|   Std_Y > 5.556531: hand_wash (40.0/13.0)
+
+Number of Leaves  : 	18
+
+Size of the tree : 	35
+
+
+=== Stratified cross-validation ===
+
+Correctly Classified Instances        1101               79.4946 %
+Incorrectly Classified Instances       284               20.5054 %
+Kappa statistic                          0.5922
+Mean absolute error                      0.2468
+Root mean squared error                  0.372 
+Relative absolute error                 49.8519 %
+Root relative squared error             74.7794 %
+Total Number of Instances             1385     
+
+
+=== Detailed Accuracy By Class ===
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.743    0.141    0.865      0.743    0.799      0.599    0.874     0.865     hand_wash
+                 0.859    0.257    0.732      0.859    0.790      0.599    0.874     0.847     no_hand_wash
+Weighted Avg.    0.795    0.193    0.805      0.795    0.795      0.599    0.874     0.857     
+
+
+=== Confusion Matrix ===
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 566 196 |   a = hand_wash
+  88 535 |   b = no_hand_wash
+

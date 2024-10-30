@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [
+        "c:\\Program Files\\Weka-3-8-6\\weka.jar"
+    ]
+}

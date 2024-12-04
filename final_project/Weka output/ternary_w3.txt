@@ -1,0 +1,90 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     wada
+Instances:    439
+Attributes:   7
+              Mean_X
+              Std_X
+              Mean_Y
+              Std_Y
+              Mean_Z
+              Std_Z
+              Activity
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Mean_X <= -0.678307
+|   Std_X <= 0.993707: major_fall (29.0)
+|   Std_X > 0.993707
+|   |   Std_Y <= 4.297167
+|   |   |   Mean_Z <= 3.476322
+|   |   |   |   Std_X <= 6.62075: no_fall (41.0/2.0)
+|   |   |   |   Std_X > 6.62075: minor_fall (2.0)
+|   |   |   Mean_Z > 3.476322
+|   |   |   |   Mean_Z <= 6.275627
+|   |   |   |   |   Std_Z <= 2.88971: major_fall (9.0)
+|   |   |   |   |   Std_Z > 2.88971
+|   |   |   |   |   |   Mean_Z <= 4.495712: no_fall (3.0)
+|   |   |   |   |   |   Mean_Z > 4.495712: major_fall (2.0/1.0)
+|   |   |   |   Mean_Z > 6.275627: no_fall (15.0/1.0)
+|   |   Std_Y > 4.297167
+|   |   |   Std_Y <= 13.291652
+|   |   |   |   Std_Z <= 5.386749
+|   |   |   |   |   Std_X <= 4.438552
+|   |   |   |   |   |   Std_X <= 3.511049: major_fall (2.0)
+|   |   |   |   |   |   Std_X > 3.511049: no_fall (7.0)
+|   |   |   |   |   Std_X > 4.438552
+|   |   |   |   |   |   Mean_X <= -10.301742: minor_fall (2.0/1.0)
+|   |   |   |   |   |   Mean_X > -10.301742: major_fall (5.0)
+|   |   |   |   Std_Z > 5.386749
+|   |   |   |   |   Mean_Z <= 0.928669
+|   |   |   |   |   |   Mean_X <= -9.679788: major_fall (8.0)
+|   |   |   |   |   |   Mean_X > -9.679788
+|   |   |   |   |   |   |   Std_X <= 9.678794: minor_fall (4.0)
+|   |   |   |   |   |   |   Std_X > 9.678794: major_fall (2.0)
+|   |   |   |   |   Mean_Z > 0.928669: major_fall (28.0)
+|   |   |   Std_Y > 13.291652: no_fall (5.0)
+Mean_X > -0.678307: no_fall (275.0)
+
+Number of Leaves  : 	17
+
+Size of the tree : 	33
+
+
+Time taken to build model: 0.06 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          83               94.3182 %
+Incorrectly Classified Instances         5                5.6818 %
+Kappa statistic                          0.8599
+Mean absolute error                      0.0444
+Root mean squared error                  0.194 
+Relative absolute error                 17.518  %
+Root relative squared error             51.5925 %
+Total Number of Instances               88     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.950    0.044    0.864      0.950    0.905      0.877    0.958     0.861     major_fall
+                 0.250    0.000    1.000      0.250    0.400      0.491    0.621     0.284     minor_fall
+                 0.984    0.083    0.969      0.984    0.977      0.913    0.947     0.965     no_fall
+Weighted Avg.    0.943    0.071    0.947      0.943    0.934      0.886    0.935     0.911     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 19  0  1 |  a = major_fall
+  2  1  1 |  b = minor_fall
+  1  0 63 |  c = no_fall
+

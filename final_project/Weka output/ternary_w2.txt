@@ -1,0 +1,104 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     wada
+Instances:    479
+Attributes:   7
+              Mean_X
+              Std_X
+              Mean_Y
+              Std_Y
+              Mean_Z
+              Std_Z
+              Activity
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Mean_X <= -0.516854
+|   Std_X <= 0.923871: major_fall (45.0/1.0)
+|   Std_X > 0.923871
+|   |   Std_X <= 6.111251
+|   |   |   Mean_Z <= 0.181173
+|   |   |   |   Std_Z <= 3.158592: no_fall (27.0)
+|   |   |   |   Std_Z > 3.158592
+|   |   |   |   |   Mean_Y <= -3.919833: no_fall (6.0)
+|   |   |   |   |   Mean_Y > -3.919833: minor_fall (7.0/1.0)
+|   |   |   Mean_Z > 0.181173
+|   |   |   |   Mean_X <= -6.497362
+|   |   |   |   |   Mean_Z <= 3.905282
+|   |   |   |   |   |   Std_Y <= 2.138822: minor_fall (4.0/1.0)
+|   |   |   |   |   |   Std_Y > 2.138822
+|   |   |   |   |   |   |   Std_X <= 3.96546
+|   |   |   |   |   |   |   |   Std_Z <= 2.473953: major_fall (2.0)
+|   |   |   |   |   |   |   |   Std_Z > 2.473953: no_fall (7.0)
+|   |   |   |   |   |   |   Std_X > 3.96546
+|   |   |   |   |   |   |   |   Std_Y <= 4.331162: no_fall (2.0)
+|   |   |   |   |   |   |   |   Std_Y > 4.331162
+|   |   |   |   |   |   |   |   |   Mean_X <= -9.383091: major_fall (6.0/1.0)
+|   |   |   |   |   |   |   |   |   Mean_X > -9.383091: minor_fall (4.0/1.0)
+|   |   |   |   |   Mean_Z > 3.905282: major_fall (10.0/1.0)
+|   |   |   |   Mean_X > -6.497362
+|   |   |   |   |   Mean_Y <= -5.206873
+|   |   |   |   |   |   Std_X <= 4.37405
+|   |   |   |   |   |   |   Std_Z <= 2.032317: major_fall (3.0)
+|   |   |   |   |   |   |   Std_Z > 2.032317: no_fall (6.0)
+|   |   |   |   |   |   Std_X > 4.37405: major_fall (4.0)
+|   |   |   |   |   Mean_Y > -5.206873: no_fall (20.0)
+|   |   Std_X > 6.111251
+|   |   |   Std_Y <= 5.390516: minor_fall (6.0/1.0)
+|   |   |   Std_Y > 5.390516
+|   |   |   |   Std_Y <= 10.308266
+|   |   |   |   |   Mean_Z <= -0.041004
+|   |   |   |   |   |   Std_Z <= 8.974454: minor_fall (5.0)
+|   |   |   |   |   |   Std_Z > 8.974454
+|   |   |   |   |   |   |   Std_Y <= 9.523075: major_fall (2.0)
+|   |   |   |   |   |   |   Std_Y > 9.523075: minor_fall (2.0)
+|   |   |   |   |   Mean_Z > -0.041004
+|   |   |   |   |   |   Std_Z <= 6.692036
+|   |   |   |   |   |   |   Mean_Z <= 2.801804: minor_fall (3.0)
+|   |   |   |   |   |   |   Mean_Z > 2.801804: major_fall (3.0)
+|   |   |   |   |   |   Std_Z > 6.692036: major_fall (14.0)
+|   |   |   |   Std_Y > 10.308266: major_fall (16.0/1.0)
+Mean_X > -0.516854: no_fall (275.0)
+
+Number of Leaves  : 	24
+
+Size of the tree : 	47
+
+
+Time taken to build model: 0.05 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          78               81.25   %
+Incorrectly Classified Instances        18               18.75   %
+Kappa statistic                          0.6031
+Mean absolute error                      0.1245
+Root mean squared error                  0.3294
+Relative absolute error                 41.1716 %
+Root relative squared error             81.7707 %
+Total Number of Instances               96     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.615    0.057    0.800      0.615    0.696      0.611    0.849     0.712     major_fall
+                 0.167    0.089    0.111      0.167    0.133      0.065    0.637     0.127     minor_fall
+                 0.953    0.188    0.910      0.953    0.931      0.786    0.968     0.975     no_fall
+Weighted Avg.    0.813    0.146    0.831      0.813    0.818      0.694    0.915     0.851     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 16  6  4 |  a = major_fall
+  3  1  2 |  b = minor_fall
+  1  2 61 |  c = no_fall
+

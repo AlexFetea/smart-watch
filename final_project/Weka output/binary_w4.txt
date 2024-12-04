@@ -1,0 +1,78 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     wada
+Instances:    411
+Attributes:   7
+              Mean_X
+              Std_X
+              Mean_Y
+              Std_Y
+              Mean_Z
+              Std_Z
+              Activity
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Mean_X <= -0.827184
+|   Std_Z <= 7.516535
+|   |   Std_X <= 1.037517: fall (14.0)
+|   |   Std_X > 1.037517
+|   |   |   Mean_Z <= 0.363477
+|   |   |   |   Mean_Y <= -2.187468: no_fall (36.0)
+|   |   |   |   Mean_Y > -2.187468: fall (2.0)
+|   |   |   Mean_Z > 0.363477
+|   |   |   |   Mean_X <= -6.568143
+|   |   |   |   |   Mean_Z <= 2.731028
+|   |   |   |   |   |   Mean_X <= -9.125886: fall (4.0)
+|   |   |   |   |   |   Mean_X > -9.125886: no_fall (8.0/1.0)
+|   |   |   |   |   Mean_Z > 2.731028: fall (26.0/1.0)
+|   |   |   |   Mean_X > -6.568143
+|   |   |   |   |   Mean_Y <= -5.364334
+|   |   |   |   |   |   Mean_X <= -2.326867
+|   |   |   |   |   |   |   Mean_Z <= 4.858534: no_fall (5.0)
+|   |   |   |   |   |   |   Mean_Z > 4.858534: fall (3.0/1.0)
+|   |   |   |   |   |   Mean_X > -2.326867: fall (3.0)
+|   |   |   |   |   Mean_Y > -5.364334: no_fall (19.0)
+|   Std_Z > 7.516535: fall (17.0)
+Mean_X > -0.827184: no_fall (274.0)
+
+Number of Leaves  : 	12
+
+Size of the tree : 	23
+
+
+Time taken to build model: 0.04 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          78               95.122  %
+Incorrectly Classified Instances         4                4.878  %
+Kappa statistic                          0.8174
+Mean absolute error                      0.0538
+Root mean squared error                  0.1956
+Relative absolute error                 20.0557 %
+Root relative squared error             55.2039 %
+Total Number of Instances               82     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.917    0.043    0.786      0.917    0.846      0.821    0.988     0.926     fall
+                 0.957    0.083    0.985      0.957    0.971      0.821    0.988     0.997     no_fall
+Weighted Avg.    0.951    0.077    0.956      0.951    0.953      0.821    0.987     0.986     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 11  1 |  a = fall
+  3 67 |  b = no_fall
+

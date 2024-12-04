@@ -1,0 +1,82 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     wada
+Instances:    439
+Attributes:   7
+              Mean_X
+              Std_X
+              Mean_Y
+              Std_Y
+              Mean_Z
+              Std_Z
+              Activity
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Mean_X <= -0.678307
+|   Std_X <= 0.993707: fall (29.0)
+|   Std_X > 0.993707
+|   |   Std_X <= 5.172562
+|   |   |   Mean_Z <= 1.400965
+|   |   |   |   Std_Z <= 3.62361: no_fall (28.0)
+|   |   |   |   Std_Z > 3.62361
+|   |   |   |   |   Mean_Y <= -3.423348: no_fall (7.0)
+|   |   |   |   |   Mean_Y > -3.423348: fall (4.0/1.0)
+|   |   |   Mean_Z > 1.400965
+|   |   |   |   Mean_Z <= 7.110293
+|   |   |   |   |   Std_Z <= 3.090532: fall (11.0)
+|   |   |   |   |   Std_Z > 3.090532
+|   |   |   |   |   |   Std_X <= 3.190352: no_fall (7.0)
+|   |   |   |   |   |   Std_X > 3.190352
+|   |   |   |   |   |   |   Mean_X <= -7.354415: fall (6.0)
+|   |   |   |   |   |   |   Mean_X > -7.354415
+|   |   |   |   |   |   |   |   Std_Z <= 4.117382: no_fall (5.0)
+|   |   |   |   |   |   |   |   Std_Z > 4.117382
+|   |   |   |   |   |   |   |   |   Mean_X <= -3.489604: no_fall (4.0/1.0)
+|   |   |   |   |   |   |   |   |   Mean_X > -3.489604: fall (3.0)
+|   |   |   |   Mean_Z > 7.110293: no_fall (11.0)
+|   |   Std_X > 5.172562
+|   |   |   Mean_Z <= -3.674913: no_fall (4.0)
+|   |   |   Mean_Z > -3.674913: fall (45.0/3.0)
+Mean_X > -0.678307: no_fall (275.0)
+
+Number of Leaves  : 	14
+
+Size of the tree : 	27
+
+
+Time taken to build model: 0.05 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          84               95.4545 %
+Incorrectly Classified Instances         4                4.5455 %
+Kappa statistic                          0.8791
+Mean absolute error                      0.0499
+Root mean squared error                  0.1967
+Relative absolute error                 13.6487 %
+Root relative squared error             43.6446 %
+Total Number of Instances               88     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.833    0.000    1.000      0.833    0.909      0.886    0.971     0.952     fall
+                 1.000    0.167    0.941      1.000    0.970      0.886    0.971     0.980     no_fall
+Weighted Avg.    0.955    0.121    0.957      0.955    0.953      0.886    0.971     0.973     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 20  4 |  a = fall
+  0 64 |  b = no_fall
+

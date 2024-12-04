@@ -1,0 +1,72 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     wada
+Instances:    520
+Attributes:   7
+              Mean_X
+              Std_X
+              Mean_Y
+              Std_Y
+              Mean_Z
+              Std_Z
+              Activity
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Mean_X <= -0.473806
+|   Std_Z <= 0.796493: fall (69.0/1.0)
+|   Std_Z > 0.796493
+|   |   Mean_Y <= -1.599731
+|   |   |   Mean_Z <= -0.134607
+|   |   |   |   Std_Z <= 3.905381: no_fall (33.0)
+|   |   |   |   Std_Z > 3.905381
+|   |   |   |   |   Mean_Y <= -7.790724: no_fall (5.0/1.0)
+|   |   |   |   |   Mean_Y > -7.790724: fall (18.0)
+|   |   |   Mean_Z > -0.134607
+|   |   |   |   Mean_Z <= 6.716179: fall (75.0/17.0)
+|   |   |   |   Mean_Z > 6.716179: no_fall (14.0/2.0)
+|   |   Mean_Y > -1.599731
+|   |   |   Mean_X <= -3.551851: fall (25.0)
+|   |   |   Mean_X > -3.551851: no_fall (5.0)
+Mean_X > -0.473806: no_fall (276.0/2.0)
+
+Number of Leaves  : 	9
+
+Size of the tree : 	17
+
+
+Time taken to build model: 0.06 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          94               90.3846 %
+Incorrectly Classified Instances        10                9.6154 %
+Kappa statistic                          0.7819
+Mean absolute error                      0.1129
+Root mean squared error                  0.2955
+Relative absolute error                 25.7047 %
+Root relative squared error             63.8491 %
+Total Number of Instances              104     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.906    0.097    0.806      0.906    0.853      0.785    0.909     0.758     fall
+                 0.903    0.094    0.956      0.903    0.929      0.785    0.909     0.949     no_fall
+Weighted Avg.    0.904    0.095    0.910      0.904    0.905      0.785    0.909     0.890     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 29  3 |  a = fall
+  7 65 |  b = no_fall
+

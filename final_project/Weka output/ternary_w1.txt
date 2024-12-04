@@ -1,0 +1,106 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     wada
+Instances:    520
+Attributes:   7
+              Mean_X
+              Std_X
+              Mean_Y
+              Std_Y
+              Mean_Z
+              Std_Z
+              Activity
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Mean_X <= -0.473806
+|   Std_Z <= 0.796493
+|   |   Mean_Z <= 7.511374: major_fall (60.0/2.0)
+|   |   Mean_Z > 7.511374
+|   |   |   Mean_X <= -4.888916: minor_fall (4.0/1.0)
+|   |   |   Mean_X > -4.888916: major_fall (5.0/1.0)
+|   Std_Z > 0.796493
+|   |   Std_Z <= 8.393666
+|   |   |   Mean_Z <= 0.072862
+|   |   |   |   Std_Z <= 3.905381
+|   |   |   |   |   Mean_Y <= -1.599731: no_fall (33.0)
+|   |   |   |   |   Mean_Y > -1.599731: minor_fall (2.0)
+|   |   |   |   Std_Z > 3.905381
+|   |   |   |   |   Mean_Y <= -7.91882: no_fall (4.0)
+|   |   |   |   |   Mean_Y > -7.91882: minor_fall (19.0)
+|   |   |   Mean_Z > 0.072862
+|   |   |   |   Std_Y <= 1.653771
+|   |   |   |   |   Std_Y <= 0.649331: minor_fall (5.0)
+|   |   |   |   |   Std_Y > 0.649331
+|   |   |   |   |   |   Std_X <= 0.999799: major_fall (7.0)
+|   |   |   |   |   |   Std_X > 0.999799
+|   |   |   |   |   |   |   Mean_Z <= 4.012417: minor_fall (3.0)
+|   |   |   |   |   |   |   Mean_Z > 4.012417
+|   |   |   |   |   |   |   |   Mean_X <= -5.264194: major_fall (4.0)
+|   |   |   |   |   |   |   |   Mean_X > -5.264194: minor_fall (2.0)
+|   |   |   |   Std_Y > 1.653771
+|   |   |   |   |   Mean_Z <= 3.530828
+|   |   |   |   |   |   Mean_X <= -3.242108
+|   |   |   |   |   |   |   Std_Y <= 7.26055
+|   |   |   |   |   |   |   |   Std_Y <= 2.348798: major_fall (3.0)
+|   |   |   |   |   |   |   |   Std_Y > 2.348798
+|   |   |   |   |   |   |   |   |   Std_Y <= 4.884603
+|   |   |   |   |   |   |   |   |   |   Mean_X <= -7.094363: no_fall (3.0)
+|   |   |   |   |   |   |   |   |   |   Mean_X > -7.094363: minor_fall (5.0/1.0)
+|   |   |   |   |   |   |   |   |   Std_Y > 4.884603: minor_fall (5.0)
+|   |   |   |   |   |   |   Std_Y > 7.26055
+|   |   |   |   |   |   |   |   Std_Z <= 4.16975: minor_fall (2.0/1.0)
+|   |   |   |   |   |   |   |   Std_Z > 4.16975: major_fall (8.0/1.0)
+|   |   |   |   |   |   Mean_X > -3.242108: no_fall (4.0)
+|   |   |   |   |   Mean_Z > 3.530828
+|   |   |   |   |   |   Mean_X <= -5.501668
+|   |   |   |   |   |   |   Std_Y <= 3.847664: major_fall (12.0/2.0)
+|   |   |   |   |   |   |   Std_Y > 3.847664: no_fall (3.0)
+|   |   |   |   |   |   Mean_X > -5.501668
+|   |   |   |   |   |   |   Mean_Y <= -7.454977: major_fall (4.0/1.0)
+|   |   |   |   |   |   |   Mean_Y > -7.454977: no_fall (21.0/2.0)
+|   |   Std_Z > 8.393666: major_fall (26.0/3.0)
+Mean_X > -0.473806: no_fall (276.0/2.0)
+
+Number of Leaves  : 	25
+
+Size of the tree : 	49
+
+
+Time taken to build model: 0.1 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          88               84.6154 %
+Incorrectly Classified Instances        16               15.3846 %
+Kappa statistic                          0.6663
+Mean absolute error                      0.1255
+Root mean squared error                  0.2948
+Relative absolute error                 39.1077 %
+Root relative squared error             75.2067 %
+Total Number of Instances              104     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.800    0.089    0.741      0.800    0.769      0.693    0.877     0.699     major_fall
+                 0.286    0.041    0.333      0.286    0.308      0.263    0.811     0.232     minor_fall
+                 0.917    0.156    0.930      0.917    0.923      0.754    0.930     0.954     no_fall
+Weighted Avg.    0.846    0.132    0.844      0.846    0.845      0.706    0.910     0.844     
+
+=== Confusion Matrix ===
+
+  a  b  c   <-- classified as
+ 20  2  3 |  a = major_fall
+  3  2  2 |  b = minor_fall
+  4  2 66 |  c = no_fall
+

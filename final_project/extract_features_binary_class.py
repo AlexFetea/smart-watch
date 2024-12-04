@@ -3,7 +3,7 @@ import pandas as pd
 import csv
 
 folder_path = "formatted_data/Accelerometer Data"
-output = 'three_class_features.csv'
+output = 'two_class_features.csv'
 
 with open(output, 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)
@@ -36,9 +36,9 @@ with open(output, 'w', newline='') as csvfile:
                     window_std = window_std.fillna(0)
                     activity = "no_fall"
                     if "major_fall" in filename:
-                        activity = 'major_fall'
+                        activity = 'fall'
                     elif "minor_fall" in filename:
-                        activity = "minor_fall"
+                        activity = "fall"
                     new_row = [
                         window_mean['X'], window_std['X'],
                         window_mean['Y'], window_std['Y'],

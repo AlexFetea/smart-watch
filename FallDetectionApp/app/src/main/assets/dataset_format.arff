@@ -1,0 +1,18 @@
+@RELATION fall_detection
+
+@ATTRIBUTE Mean_X numeric
+@ATTRIBUTE Std_X numeric
+@ATTRIBUTE Range_X numeric
+@ATTRIBUTE Max_Spike_X numeric
+@ATTRIBUTE Mean_Y numeric
+@ATTRIBUTE Std_Y numeric
+@ATTRIBUTE Range_Y numeric
+@ATTRIBUTE Max_Spike_Y numeric
+@ATTRIBUTE Mean_Z numeric
+@ATTRIBUTE Std_Z numeric
+@ATTRIBUTE Range_Z numeric
+@ATTRIBUTE Max_Spike_Z numeric
+@ATTRIBUTE Total_Acc numeric
+@ATTRIBUTE Activity {fall,no_fall}
+
+@DATA
